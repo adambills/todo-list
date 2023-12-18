@@ -1,4 +1,4 @@
-// import "./style.scss";
+import "./style.scss";
 // import Folder from "./Folder.js";
 // import { getSelectedFolder } from "./manageFolders.js";
 

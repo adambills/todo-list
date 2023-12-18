@@ -11,7 +11,7 @@ export default class Folder {
     this.itemArr = []; // private
     this.element = document.createElement("div");
     folder.element.addEventListener("click", setActiveFolder);
-    folder.element.classList.add("folderDiv");
+    folder.element.classList.add("folderDiv"); 
   }
 
   get numItems() {
