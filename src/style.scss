@@ -14,7 +14,7 @@ body {
 
 .content {
   background-color: aliceblue;
-  border: 2px solid black;
+  // border: 2px solid black;
   min-height: 100%;
   width: clamp(580px, 80%, 800px);
   margin: 0 auto;
@@ -24,7 +24,7 @@ body {
 
 header {
   justify-self: center;
-  margin-top: 2rem;
+  margin: 2rem 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -36,12 +36,7 @@ header {
 main {
   background-color: rgb(203, 231, 255);
   display: grid;
-  grid-template-rows: 1fr 1fr;
-  // > div {
-  //   margin: 1rem;
-  //   display: grid;
-  //   grid-template-rows: auto 1fr;
-  // }
+  grid-template-rows: auto 1fr;
 }
 
 .folders {
@@ -84,6 +79,49 @@ main {
     grid-row: 1;
   }
   :nth-child(2) {
+    grid-column: 3;
+    grid-row: 1;
+  }
+}
+
+.tasks {
+  background: white;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  margin: 1rem;
+  padding: 0.5rem;
+  border: 2px solid black;
+}
+
+.task {
+  padding: 0.25rem;
+  &:not(:last-child) {
+    border-bottom: 1px solid black;
+  }
+}
+
+.task-content {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  grid-template-columns: 1fr auto auto;
+  gap: 4px;
+  font-size: clamp(1rem, 2.25vw, 1.5rem);
+  p {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  img {
+    width: clamp(1rem, 2.25vw, 1.5rem);
+  }
+  :nth-child(3) {
+    grid-column: 2;
+    grid-row: 1;
+  }
+  :nth-child(4) {
     grid-column: 3;
     grid-row: 1;
   }
