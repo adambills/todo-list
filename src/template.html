@@ -9,9 +9,11 @@
     <div class="content">
       <header>
         <h1 id="title">Root Folder</h1>
+        <button id="new-folder">New Folder</button>
+        <button id="new-task">New Task</button>
       </header>
       <main>
-        <div class="container">
+        <div id="folders" class="container">
           <div class="folders">
             <div class="folder">
               <svg
@@ -21,7 +23,7 @@
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                d="M 19.034314,1.4617604 H 10.102946 L 8.8576944,0.10112265 H 0.70840778 c -0.69032235,0 -0.60503165,-0.0595239 -0.60503165,0.75 0,0 0.001522,13.14321135 -4.3032e-4,13.53866135 -0.003329,0.674537 -0.05550293,0.571977 1.06603619,0.571977 h 17.829142 c 1.095319,0 1.104822,0.162224 1.104822,-0.592217 V 2.6495257 c 0,-1.11 0.03137,-1.1877653 -1.068632,-1.1877653 z m 0.06863,13.5000006 c -0.408906,7.79e-4 -17.2177877,-1.5e-4 -18.0000002,0 -1.04588782,-0.0089 -0.99101822,0.08006 -1.00000002,-0.5 -6.105e-4,-0.250229 4.3235e-4,-13.0000006 4.3235e-4,-13.0000006 0,0 17.50966387,-0.00266 18.95203587,0 1.147284,-0.013828 1.021283,0.1641344 1.047532,1.2010312 -0.002,2.6095702 -0.0018,11.0952634 4.3e-5,11.7950634 -0.03497,0.612962 0.04314,0.518909 -1,0.503906 z"
+                  d="M 19.034314,1.4617604 H 10.102946 L 8.8576944,0.10112265 H 0.70840778 c -0.69032235,0 -0.60503165,-0.0595239 -0.60503165,0.75 0,0 0.001522,13.14321135 -4.3032e-4,13.53866135 -0.003329,0.674537 -0.05550293,0.571977 1.06603619,0.571977 h 17.829142 c 1.095319,0 1.104822,0.162224 1.104822,-0.592217 V 2.6495257 c 0,-1.11 0.03137,-1.1877653 -1.068632,-1.1877653 z m 0.06863,13.5000006 c -0.408906,7.79e-4 -17.2177877,-1.5e-4 -18.0000002,0 -1.04588782,-0.0089 -0.99101822,0.08006 -1.00000002,-0.5 -6.105e-4,-0.250229 4.3235e-4,-13.0000006 4.3235e-4,-13.0000006 0,0 17.50966387,-0.00266 18.95203587,0 1.147284,-0.013828 1.021283,0.1641344 1.047532,1.2010312 -0.002,2.6095702 -0.0018,11.0952634 4.3e-5,11.7950634 -0.03497,0.612962 0.04314,0.518909 -1,0.503906 z"
                   style="
                     stroke-width: 0.4;
                     stroke-linecap: square;
@@ -41,130 +43,55 @@
             <!--  -->
           </div>
         </div>
-        <div class="container">
+        <div id="tasks" class="container">
           <div class="tasks">
             <div class="task">
               <div class="task-content">
                 <h4 class="task-title">Task Title</h4>
                 <p class="task-description">
-                  Here is a somewhat long task description.
+                  Here is a long task description. Quite long, actually. Lorem
+                  ipsum dolor.
                 </p>
                 <img src="./img/edit.svg" alt="Edit Task Icon" />
                 <img src="./img/delete.svg" alt="Delete Task Icon" />
               </div>
             </div>
-            <div class="task">
-              <div class="task-content">
-                <h4 class="task-title">Task Title</h4>
-                <p class="task-description">
-                  Here is a somewhat long task description. This one is even longer lorem ipsum dolor.
-                </p>
-                <img src="./img/edit.svg" alt="Edit Task Icon" />
-                <img src="./img/delete.svg" alt="Delete Task Icon" />
-              </div>
-            </div>
-            <div class="task">
-              <div class="task-content">
-                <h4 class="task-title">Task Title</h4>
-                <p class="task-description">
-                  Here is a somewhat long task description.
-                </p>
-                <img src="./img/edit.svg" alt="Edit Task Icon" />
-                <img src="./img/delete.svg" alt="Delete Task Icon" />
-              </div>
-            </div>
-            <div class="task">
-              <div class="task-content">
-                <h4 class="task-title">Task Title</h4>
-                <p class="task-description">
-                  Here is a somewhat long task description.
-                </p>
-                <img src="./img/edit.svg" alt="Edit Task Icon" />
-                <img src="./img/delete.svg" alt="Delete Task Icon" />
-              </div>
-            </div>
-            <div class="task">
-                <div class="task-content">
-                  <h4 class="task-title">Task Title</h4>
-                  <p class="task-description">
-                    Here is a somewhat long task description.
-                  </p>
-                  <img src="./img/edit.svg" alt="Edit Task Icon" />
-                  <img src="./img/delete.svg" alt="Delete Task Icon" />
-                </div>
-              </div>
-              <div class="task">
-                <div class="task-content">
-                  <h4 class="task-title">Task Title</h4>
-                  <p class="task-description">
-                    Here is a somewhat long task description.
-                  </p>
-                  <img src="./img/edit.svg" alt="Edit Task Icon" />
-                  <img src="./img/delete.svg" alt="Delete Task Icon" />
-                </div>
-              </div>
-              <div class="task">
-                <div class="task-content">
-                  <h4 class="task-title">Task Title</h4>
-                  <p class="task-description">
-                    Here is a somewhat long task description.
-                  </p>
-                  <img src="./img/edit.svg" alt="Edit Task Icon" />
-                  <img src="./img/delete.svg" alt="Delete Task Icon" />
-                </div>
-              </div>
-              <div class="task">
-                <div class="task-content">
-                  <h4 class="task-title">Task Title</h4>
-                  <p class="task-description">
-                    Here is a somewhat long task description.
-                  </p>
-                  <img src="./img/edit.svg" alt="Edit Task Icon" />
-                  <img src="./img/delete.svg" alt="Delete Task Icon" />
-                </div>
-              </div>
-              <div class="task">
-                <div class="task-content">
-                  <h4 class="task-title">Task Title</h4>
-                  <p class="task-description">
-                    Here is a somewhat long task description.
-                  </p>
-                  <img src="./img/edit.svg" alt="Edit Task Icon" />
-                  <img src="./img/delete.svg" alt="Delete Task Icon" />
-                </div>
-              </div>
-              <div class="task">
-                <div class="task-content">
-                  <h4 class="task-title">Task Title</h4>
-                  <p class="task-description">
-                    Here is a somewhat long task description.
-                  </p>
-                  <img src="./img/edit.svg" alt="Edit Task Icon" />
-                  <img src="./img/delete.svg" alt="Delete Task Icon" />
-                </div>
-              </div>
-              <div class="task">
-                <div class="task-content">
-                  <h4 class="task-title">Task Title</h4>
-                  <p class="task-description">
-                    Here is a somewhat long task description.
-                  </p>
-                  <img src="./img/edit.svg" alt="Edit Task Icon" />
-                  <img src="./img/delete.svg" alt="Delete Task Icon" />
-                </div>
-              </div>
-              <div class="task">
-                <div class="task-content">
-                  <h4 class="task-title">Task Title</h4>
-                  <p class="task-description">
-                    Here is a somewhat long task description.
-                  </p>
-                  <img src="./img/edit.svg" alt="Edit Task Icon" />
-                  <img src="./img/delete.svg" alt="Delete Task Icon" />
-                </div>
-              </div>
           </div>
         </div>
+        <dialog id="new-folder-dialog"> 
+          // title, color
+          <div id="form-container">
+            <img src="./img/close-thick.svg" alt="An X Icon" />
+            <form action="" method="get">
+              <div>
+                <label for="folder-title-input">Title:</label>
+                <input id="folder-title-input" type="text" maxlength="70" />
+              </div>
+              <div>
+                <label for="folder-color-input">Color:</label>
+                <input id="folder-color-input" type="color" value="#ffffff" />
+              </div>
+              <button type="submit">Create Folder</button>
+            </form>
+          </div>
+        </dialog>
+        <dialog id="new-task-dialog">
+          // title, description, dueDate, priority
+          <div id="form-container">
+            <img src="./img/close-thick.svg" alt="An X Icon" />
+            <form action="" method="get">
+              <div>
+                <label for="folder-title-input">Title:</label>
+                <input id="folder-title-input" type="text" maxlength="70" />
+              </div>
+              <div>
+                <label for="folder-color-input">Color:</label>
+                <input id="folder-color-input" type="color" value="#ffffff" />
+              </div>
+              <button type="submit">Create New Task</button>
+            </form>
+          </div>
+        </dialog>
       </main>
       <footer>
         <div>Developed for The Odin Project by Adam Bills</div>
