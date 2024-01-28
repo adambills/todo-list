@@ -58,38 +58,66 @@
             </div>
           </div>
         </div>
-        <dialog id="new-folder-dialog"> 
-          // title, color
+        <dialog id="new-folder-dialog">
           <div id="form-container">
-            <img src="./img/close-thick.svg" alt="An X Icon" />
-            <form action="" method="get">
-              <div>
-                <label for="folder-title-input">Title:</label>
+            <h3>New Folder</h3>
+            <img src="./img/close-thick.svg" class="closeDialog" alt="An X Icon" />
+
+            <form class="folder-form" action="" method="">
+              <div class="title-input">
+                <label for="folder-title-input">Title</label>
                 <input id="folder-title-input" type="text" maxlength="70" />
               </div>
-              <div>
-                <label for="folder-color-input">Color:</label>
+              <div class="color-input">
+                <label for="folder-color-input">Color</label>
                 <input id="folder-color-input" type="color" value="#ffffff" />
               </div>
               <button type="submit">Create Folder</button>
             </form>
+
           </div>
         </dialog>
         <dialog id="new-task-dialog">
-          // title, description, dueDate, priority
+          <!-- title, dueDate, priority, description -->
           <div id="form-container">
-            <img src="./img/close-thick.svg" alt="An X Icon" />
-            <form action="" method="get">
-              <div>
-                <label for="folder-title-input">Title:</label>
-                <input id="folder-title-input" type="text" maxlength="70" />
+            <h3>New Task</h3>
+            <img src="./img/close-thick.svg" class="closeDialog" alt="An X Icon" />
+
+            <form class="task-form" action="" method="">
+              <div class="title-input">
+                <label for="task-title-input">Title</label>
+                <input id="task-title-input" type="text" maxlength="70" />
               </div>
-              <div>
-                <label for="folder-color-input">Color:</label>
-                <input id="folder-color-input" type="color" value="#ffffff" />
+              <div class="date-input">
+                <label for="task-date-input">Due Date</label>
+                <input id="task-date-input" type="date" value="2000-01-01" />
               </div>
-              <button type="submit">Create New Task</button>
+              <div class="priority-input">
+                <fieldset>
+                  <legend>Priority Level</legend>
+                  <ul>
+                    <li>
+                      <input type="radio" id="low-priority" />
+                      <label for="low-priority">Low</label>
+                    </li>
+                    <li>
+                      <input type="radio" id="medium-priority" />
+                      <label for="medium-priority">Medium</label>
+                    </li>
+                    <li>
+                      <input type="radio" id="high-priority" />
+                      <label for="high-priority">High</label>
+                    </li>
+                  </ul>
+                </fieldset>
+              </div>
+              <div class="description-input">
+                <label for="task-description-input">Description</label>
+                <textarea id="task-description-input" rows="6"></textarea>
+              </div>
+              <button type="submit">Create Task</button>
             </form>
+
           </div>
         </dialog>
       </main>

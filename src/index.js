@@ -1,11 +1,20 @@
 import "./style.scss";
-import { newFolder, newFolderDialog, newTask, newTaskDialog } from "./domCache";
+import { newFolder, newFolderDialog, newTask, newTaskDialog, closeDialogBtns } from "./domCache";
 
-activateDialogButton(newFolder, newFolderDialog);
-activateDialogButton(newTask, newTaskDialog);
+newTaskDialog.showModal();
 
-function activateDialogButton(button, dialog) {
+activateDialog(newFolder, newFolderDialog);
+activateDialog(newTask, newTaskDialog);
+
+function activateDialog(button, dialog) {
     button.addEventListener('click', ()=> {
         dialog.showModal();
     });
+}
+
+for (const button of [...closeDialogBtns]) {
+    const dialog = button.closest('dialog');
+    button.addEventListener('click', () => {
+        dialog.close();
+    })
 }
