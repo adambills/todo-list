@@ -1,26 +1,25 @@
-import TodoItem from "./TodoItem.js";
+import Task from "./Task.js";
 import { setParents, setActiveFolder } from "./manageFolders.js";
 
 export default class Folder {
-  constructor(title, description, color, parentLevel) {
+  constructor(title, color/*, parentLevel*/) {
     this.title = title;
-    this.description = description; // set () { render() }
     this.color = color;
-    this.level = parentLevel + 1; // private
+    //this.level = parentLevel + 1; // private
     this.folderArr = []; // private
-    this.itemArr = []; // private
+    this.taskArr = []; // private
     this.element = document.createElement("div");
-    folder.element.addEventListener("click", setActiveFolder);
-    folder.element.classList.add("folderDiv"); 
+    this.element.addEventListener("click", setActiveFolder);
+    this.element.classList.add("folderDiv"); 
   }
 
   get numItems() {
-    return this.itemArr.length;
+    return this.taskArr.length;
   }
 
-  addNewItem(title, description, dueDate, priority) {
-    const newItem = new TodoItem(title, description, dueDate, priority);
-    this.itemArr.push(newItem);
+  addNewTask(title, dueDate, priority, description) {
+    const newItem = new Task(title, dueDate, priority, description);
+    this.taskArr.push(newItem);
     return newItem;
   }
 
@@ -32,7 +31,7 @@ export default class Folder {
   }
 
   removeItem(index) {
-    if (index > -1) this.itemArr.splice(index, 1);
+    if (index > -1) this.taskArr.splice(index, 1);
   }
 
   removeFolder(index) {

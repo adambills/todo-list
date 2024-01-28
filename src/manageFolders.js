@@ -1,10 +1,10 @@
 import Folder from "./Folder";
 
-const rootFolder = new Folder("Todo List", "Root Folder", "blue", -1);
+const rootFolder = new Folder("Root Folder", "blue"/*, -1*/);
 let activeFolder = rootFolder;
 // render(activeFolder);
 
-export function setParents(parentFolder) {
+function setParents(parentFolder) {
   const folderArr = parentFolder.folderArr;
 
   for (const folder of folderArr) {
@@ -13,7 +13,11 @@ export function setParents(parentFolder) {
   }
 }
 
-export function setActiveFolder(event) {
+function getActiveFolder() {
+  return activeFolder;
+}
+
+function setActiveFolder(event) {
   activeFolder = getSelectedFolder(rootFolder, event);
   // render(activeFolder);
 }
@@ -34,4 +38,4 @@ function getSelectedFolder(currentFolder, event) {
   }
 }
 
-// export { setParents, setActiveFolder };
+export { setParents, setActiveFolder, getActiveFolder, Folder };

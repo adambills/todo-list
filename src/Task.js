@@ -1,9 +1,9 @@
-export default class TodoItem {
-    constructor(title, description, dueDate, priority) {
+export default class Task {
+    constructor(title, dueDate, priority, description) {
         this.title = title;
-        this.description = description;
         this.dueDate = dueDate;
         this.priority = priority;
+        this.description = description;
         this.isComplete = false;
     }
 
