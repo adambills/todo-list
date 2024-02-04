@@ -1,6 +1,6 @@
 import { getActiveFolder } from "./manageFolders";
 import { getInputArr } from "./domCache";
-import { renderNewFolder, renderNewTask } from "./render";
+import { renderFolder, renderTask } from "./renderObjects";
 
 export default function processForm(form) {
   const activeFolder = getActiveFolder();
@@ -13,9 +13,19 @@ export default function processForm(form) {
 
   if (form.getAttribute("class") === "folder-form") {
     activeFolder.addNewFolder(...values);
-    renderNewFolder();
+    const folderArr = activeFolder.folderArr;
+    const index = folderArr.length - 1;
+    const folder = folderArr[index];
+
+    renderFolder(folder);
+
   } else {
     activeFolder.addNewTask(...values);
-    renderNewTask();
+    const taskArr = activeFolder.taskArr;
+    const index = taskArr.length - 1;
+    const task = taskArr[index];
+
+    renderTask(task);
+    
   }
 }

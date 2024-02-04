@@ -10,47 +10,6 @@ import {
   taskDueDate,
   taskDescription,
 } from "./domCache";
-import { getActiveFolder } from "./manageFolders";
-
-// task: title, dueDate, priority, description
-// folder: title, color
-
-const activeFolder = getActiveFolder();
-const folderArr = activeFolder.folderArr;
-const taskArr = activeFolder.taskArr;
-
-function renderActiveFolder() {
-  const folderNodes = [...folderContainer.querySelectorAll(".folderDiv")];
-  const taskNodes = [...taskContainer.querySelectorAll(".taskDiv")];
-  const allNodes = folderNodes.concat(taskNodes);
-
-  for (const node of allNodes) {
-    if (node) node.parentNode.removeChild(node);
-    if (node.firstChild) node.removeChild(node.firstChild);
-  }
-
-  for (const folder of folderArr) {
-    renderFolder(folder);
-  }
-
-  for (const task of taskArr) {
-    renderTask(task);
-  }
-}
-
-function renderNewFolder() {
-  const index = folderArr.length - 1;
-  const folder = folderArr[index];
-
-  renderFolder(folder);
-}
-
-function renderNewTask() {
-  const index = taskArr.length - 1;
-  const task = taskArr[index];
-
-  renderTask(task);
-}
 
 function renderFolder(folder) {
   folderSVG.setAttribute("fill", folder.color);
@@ -82,6 +41,6 @@ function renderTask(task) {
   taskContainer.appendChild(task.element);
 }
 
-export { renderActiveFolder, renderNewFolder, renderNewTask };
+export { renderFolder, renderTask };
 
 // Add module for rendering folders and tasks
