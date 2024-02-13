@@ -8,6 +8,9 @@ import {
   forms,
 } from "./domCache";
 import processForm from "./processForm";
+import { renderRootLink } from "./renderFolderLinks";
+
+renderRootLink();
 
 // activate buttons that show dialogs
 activateDialog(newFolderBtn, newFolderDialog);

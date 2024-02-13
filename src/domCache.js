@@ -4,24 +4,28 @@ const newFolderDialog = document.querySelector("#new-folder-dialog");
 const newTaskDialog = document.querySelector("#new-task-dialog");
 const closeDialogBtns = document.querySelectorAll(".closeDialog");
 
+const header = document.querySelector("#title");
+
+const folderLinkContainer = document.querySelector("#folder-links");
+const folderLinkTemplate = document.querySelector(".folder-link.template");
+const linkDividerTemplate = document.querySelector(".divider.template");
+
 const forms = document.querySelectorAll("form");
 
 const folderContainer = document.querySelector(".folders");
 const taskContainer = document.querySelector(".tasks");
 
-const folderClone = document.querySelector(".folder.template").cloneNode(true);
-folderClone.classList.remove("template");
+const folderTemplate = document.querySelector(".folder.template").cloneNode(true);
 
-const taskClone = document.querySelector(".task.template").cloneNode(true);
-taskClone.classList.remove("template");
+const taskTemplate = document.querySelector(".task.template").cloneNode(true);
 
-const folderSVG = folderClone.querySelector("svg");
-const folderTitle = folderClone.querySelector(".folder-title");
+const folderSVG = folderTemplate.querySelector("svg");
+const folderTitle = folderTemplate.querySelector(".folder-title");
 
-const taskTitle = taskClone.querySelector(".task-title");
-const taskPriority = taskClone.querySelector(".task-priority");
-const taskDueDate = taskClone.querySelector(".task-due-date");
-const taskDescription = taskClone.querySelector(".task-description");
+const taskTitle = taskTemplate.querySelector(".task-title");
+const taskPriority = taskTemplate.querySelector(".task-priority");
+const taskDueDate = taskTemplate.querySelector(".task-due-date");
+const taskDescription = taskTemplate.querySelector(".task-description");
 
 function getInputArr(form) {
   const inputs = form.querySelectorAll("input");
@@ -48,11 +52,15 @@ export {
   newFolderDialog,
   newTaskDialog,
   closeDialogBtns,
+  header,
+  folderLinkContainer,
+  folderLinkTemplate,
+  linkDividerTemplate,
   forms,
   folderContainer,
   taskContainer,
-  folderClone,
-  taskClone,
+  folderTemplate,
+  taskTemplate,
   folderSVG,
   folderTitle,
   taskTitle,

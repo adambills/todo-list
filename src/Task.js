@@ -6,7 +6,7 @@ export default class Task {
     this.description = description;
     this.isComplete = false;
     this.element = document.createElement("div");
-    this.element.classList.add("taskElement");
+    this.element.classList.add("task-element");
   }
 
   changeProperty(property, newValue) {

@@ -1,32 +1,32 @@
 import Folder from "./Folder";
 import renderActiveFolder from "./renderActiveFolder";
+import { header } from "./domCache";
 
-const rootFolder = new Folder("Root Folder", "blue" /*, -1*/);
+const rootFolder = new Folder("Home", "blue" /*, -1*/);
 let activeFolder = rootFolder;
 
-function setParents(parentFolder) {
-  const folderArr = parentFolder.folderArr;
+// function setParents(parentFolder) {
+//   const folderArr = parentFolder.folderArr;
 
-  for (const folder of folderArr) {
-    folder.parent = parentFolder;
-    setParents(folder);
-  }
-}
+//   for (const folder of folderArr) {
+//     folder.parent = parentFolder;
+//     setParents(folder);
+//   }
+// }
 
 function getActiveFolder() {
   return activeFolder;
 }
 
 function setActiveFolder(event) {
-  const folderElement = event.target.closest(".folderElement");
+  const folderElement = event.target.closest(".folder-element");
 
-  //recursive search through folders to find folder that was clicked
-  //assign clicked folder as activeFolder
   assignClickedFolder(rootFolder, folderElement);
   
+  header.innerText = activeFolder.title;
   const folderArr = activeFolder.folderArr;
   const taskArr = activeFolder.taskArr;
-  renderActiveFolder(folderArr, taskArr);
+  renderActiveFolder(activeFolder, folderArr, taskArr);
 }
 
 function assignClickedFolder(currentFolder, folderElement) {
@@ -34,9 +34,7 @@ function assignClickedFolder(currentFolder, folderElement) {
     return rootFolder;
   }
 
-  const folderArr = currentFolder.folderArr;
-
-  for (const folder of folderArr) {
+  for (const folder of currentFolder.folderArr) {
     if (Object.values(folder).includes(folderElement)) {
       activeFolder = folder;
       return;
@@ -45,4 +43,4 @@ function assignClickedFolder(currentFolder, folderElement) {
   }
 }
 
-export { setParents, setActiveFolder, getActiveFolder };
+export { rootFolder, setActiveFolder, getActiveFolder };

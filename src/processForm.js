@@ -16,6 +16,7 @@ export default function processForm(form) {
     const folderArr = activeFolder.folderArr;
     const index = folderArr.length - 1;
     const folder = folderArr[index];
+    folder.parent = activeFolder;
 
     renderFolder(folder);
 
@@ -24,8 +25,9 @@ export default function processForm(form) {
     const taskArr = activeFolder.taskArr;
     const index = taskArr.length - 1;
     const task = taskArr[index];
+    task.parent = activeFolder;
 
     renderTask(task);
-    
+
   }
 }

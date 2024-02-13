@@ -1,8 +1,8 @@
 import {
   folderContainer,
   taskContainer,
-  folderClone,
-  taskClone,
+  folderTemplate,
+  taskTemplate,
   folderSVG,
   folderTitle,
   taskTitle,
@@ -15,8 +15,9 @@ function renderFolder(folder) {
   folderSVG.setAttribute("fill", folder.color);
   folderTitle.innerText = folder.title;
 
-  const newFolderClone = folderClone.cloneNode(true);
-  folder.element.appendChild(newFolderClone);
+  const folderClone = folderTemplate.cloneNode(true);
+  folderClone.classList.remove('template');
+  folder.element.appendChild(folderClone);
   folderContainer.appendChild(folder.element);
 }
 
@@ -36,11 +37,10 @@ function renderTask(task) {
       break;
   }
 
-  const newTaskClone = taskClone.cloneNode(true);
-  task.element.appendChild(newTaskClone);
+  const taskClone = taskTemplate.cloneNode(true);
+  taskClone.classList.remove('template');
+  task.element.appendChild(taskClone);
   taskContainer.appendChild(task.element);
 }
 
 export { renderFolder, renderTask };
-
-// Add module for rendering folders and tasks
