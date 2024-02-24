@@ -16,9 +16,13 @@
       <main>
         <div id="folder-links">
           <a class="folder-link template">Root Folder</a>
-          <img src="./img/chevron-right.svg" alt="Right facing chevron symbol" class="divider template" />
+          <img
+            src="./img/chevron-right.svg"
+            alt="Right facing chevron symbol"
+            class="divider template"
+          />
         </div>
-        <div id="folders" class="container">
+        <div id="folders">
           <div class="folders">
             <div class="folder template">
               <svg
@@ -45,11 +49,10 @@
                 <h4 class="folder-title">This is a Longer Folder Title</h4>
               </div>
             </div>
-            <!--  -->
           </div>
         </div>
 
-        <div id="tasks" class="container">
+        <div id="tasks">
           <div class="tasks">
             <div class="task template">
               <div class="task-content">
@@ -224,6 +227,73 @@
 
               <button id="task-submit" type="submit">Create Task</button>
             </form>
+          </div>
+        </dialog>
+
+        <dialog id="display-task-dialog">
+          <div class="container">
+            <h3>Task Title</h3>
+            <!-- swap this icon for white version -->
+            <img src="./img/edit.svg" alt="Edit Task Icon" class="edit-task"/>
+
+            <img
+              src="./img/close-thick.svg"
+              class="closeDialog"
+              alt="An X Icon"
+            />
+
+            <svg
+              class="dialog-task-priority"
+              viewBox="0 0 24 24"
+              fill="yellow"
+              stroke="black"
+            >
+              <g id="g2">
+                <path
+                  d="M 1,21 H 23 L 12,2 Z M 13,14 H 11 V 10.575825 8 H 12.104481 13 Z m 0,4.4 H 11 V 16 h 2 z"
+                />
+                <path
+                  style="
+                    fill: #000000;
+                    fill-opacity: 1;
+                    stroke: #000000;
+                    stroke-width: 0.218;
+                    stroke-linecap: square;
+                    stroke-dasharray: none;
+                    paint-order: markers fill stroke;
+                    stroke-opacity: 1;
+                  "
+                  d="M 10.913208,10.988679 V 8.3018868 H 12 13.086792 v 2.6867922 2.686793 H 12 10.913208 Z"
+                  id="path2"
+                />
+                <path
+                  style="
+                    fill: #000000;
+                    fill-opacity: 1;
+                    stroke: #000000;
+                    stroke-width: 0.118;
+                    stroke-linecap: square;
+                    stroke-dasharray: none;
+                    paint-order: markers fill stroke;
+                    stroke-opacity: 1;
+                  "
+                  d="M 10.913208,17.388679 V 16.301887 H 12 13.086792 v 1.086792 1.086793 H 12 10.913208 Z"
+                  id="path3"
+                />
+              </g>
+            </svg>
+            <p class="dialog-task-due-date">Jan 01, 2024</p>
+            <p class="dialog-task-description">
+              Here is a long task description. Lorem ipsum dolor sit amet,
+              consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+              labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+              nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+              consequat. Duis aute irure dolor in reprehenderit in voluptate
+              velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+              occaecat cupidatat non proident, sunt in culpa qui officia
+              deserunt mollit anim id est laborum.
+            </p>
+            
           </div>
         </dialog>
       </main>

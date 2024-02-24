@@ -1,4 +1,4 @@
-import { getActiveFolder } from "./manageFolders";
+import { getActiveFolder } from "./manageObjects";
 import { getInputArr } from "./domCache";
 import { renderFolder, renderTask } from "./renderObjects";
 

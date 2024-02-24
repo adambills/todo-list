@@ -1,13 +1,13 @@
 import Task from "./Task.js";
-import { setActiveFolder, selectFolder } from "./manageFolders.js";
+import { setActiveFolder } from "./manageObjects.js";
 
 export default class Folder {
   constructor(title, color/*, parentLevel*/) {
     this.title = title;
     this.color = color;
-    //this.level = parentLevel + 1; // private
-    this.folderArr = []; // private
-    this.taskArr = []; // private
+    //this.level = parentLevel + 1;
+    this.folderArr = [];
+    this.taskArr = [];
     this.element = document.createElement("div");
     this.element.addEventListener("click", setActiveFolder);
     this.element.classList.add("folder-element"); 

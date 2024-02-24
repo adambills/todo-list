@@ -4,6 +4,12 @@ const newFolderDialog = document.querySelector("#new-folder-dialog");
 const newTaskDialog = document.querySelector("#new-task-dialog");
 const closeDialogBtns = document.querySelectorAll(".closeDialog");
 
+const taskDialog = document.querySelector('#display-task-dialog');
+const dialogTaskTitle = taskDialog.querySelector('h3');
+const dialogTaskDueDate = taskDialog.querySelector('.dialog-task-due-date');
+const dialogTaskDescription = taskDialog.querySelector('.dialog-task-description');
+const dialogTaskPriority = taskDialog.querySelector('.dialog-task-priority');
+
 const header = document.querySelector("#title");
 
 const folderLinkContainer = document.querySelector("#folder-links");
@@ -52,6 +58,11 @@ export {
   newFolderDialog,
   newTaskDialog,
   closeDialogBtns,
+  taskDialog,
+  dialogTaskTitle,
+  dialogTaskDueDate,
+  dialogTaskDescription,
+  dialogTaskPriority,
   header,
   folderLinkContainer,
   folderLinkTemplate,

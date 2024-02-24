@@ -36,3 +36,23 @@ for (const form of [...forms]) {
     processForm(form);
   });
 }
+
+
+/* 
+-Expand tasks to view all info
+-Mark tasks as complete
+-Edit/delete folders/tasks
+-Use date-fns library for date formatting
+-Use Web Storage API
+
+-Move folders/tasks to different folder
+-Ability to move/delete multiple objects at once
+-Navigation tree for moving to any folder from anywhere (maybe have tree drop down from chevron icons)
+-A page that allows you to view all tasks, not just current folder's tasks 
+-Filter/sort tasks by different conditions (completion status, priority, alphabetical, etc.)
+-Add more formatting options to task description/notes (checklist, bold, italic, bullets, alignment, font size, highlight, etc.)
+  -Quilljs.com rich text editing API
+-Change pointer style on hover
+-Add animations
+-Fine tune style
+*/

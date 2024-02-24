@@ -1,4 +1,4 @@
-import { rootFolder } from "./manageFolders";
+import { rootFolder } from "./manageObjects";
 import {
   folderLinkContainer,
   folderLinkTemplate,

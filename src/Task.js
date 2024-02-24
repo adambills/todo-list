@@ -1,3 +1,5 @@
+import renderTaskDialog from "./renderTaskDialog";
+
 export default class Task {
   constructor(title, dueDate, priority, description) {
     this.title = title;
@@ -7,6 +9,7 @@ export default class Task {
     this.isComplete = false;
     this.element = document.createElement("div");
     this.element.classList.add("task-element");
+    this.element.addEventListener('click', renderTaskDialog);
   }
 
   changeProperty(property, newValue) {

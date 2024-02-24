@@ -77,9 +77,6 @@ main {
   display: flex;
   align-items: center;
   gap: 8px;
-  .template{
-    display: none;
-  }
   .folder-element {
     display: flex;
     align-items: center;
@@ -199,6 +196,12 @@ main {
   }
 }
 
+// hide markup templates
+
+.template{
+  display: none;
+}
+
 //modal dialogs
 
 dialog {
@@ -301,4 +304,43 @@ fieldset {
 textarea {
   resize: none;
   font-size: 1rem;
+}
+
+// full task display
+
+#display-task-dialog {
+  width: 30rem;
+}
+.container {
+  display: grid;
+  grid-template-columns: auto 1fr auto auto;
+  h3 {
+    grid-row: 1;
+    grid-column: 1;
+  }
+  .edit-task {
+    grid-row: 1;
+    grid-column: 3;
+  }
+  .closeDialog {
+    grid-row: 1;
+    grid-column: 4;
+    margin-left: 0.5rem;
+  }
+  .dialog-task-priority {
+    grid-row: 2;
+    grid-column: 1;
+    width: 1.5rem;
+  }
+  .dialog-task-due-date {
+    grid-row: 2;
+    grid-column: 1;
+    margin-left: 2rem;
+    align-self: center;
+  }
+  .dialog-task-description {
+    grid-row: 3;
+    grid-column: 1/-1;
+    margin-top: 1rem;
+  }
 }
