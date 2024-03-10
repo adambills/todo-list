@@ -4,6 +4,8 @@ const newFolderDialog = document.querySelector("#new-folder-dialog");
 const newTaskDialog = document.querySelector("#new-task-dialog");
 const closeDialogBtns = document.querySelectorAll(".closeDialog");
 
+const taskCheckmark = document.querySelectorAll('.taskCheckmark');
+
 const taskDialog = document.querySelector('#display-task-dialog');
 const dialogTaskTitle = taskDialog.querySelector('h3');
 const dialogTaskDueDate = taskDialog.querySelector('.dialog-task-due-date');
@@ -58,6 +60,7 @@ export {
   newFolderDialog,
   newTaskDialog,
   closeDialogBtns,
+  taskCheckmark,
   taskDialog,
   dialogTaskTitle,
   dialogTaskDueDate,

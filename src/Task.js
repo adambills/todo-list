@@ -12,7 +12,7 @@ export default class Task {
     this.element.addEventListener('click', renderTaskDialog);
   }
 
-  changeProperty(property, newValue) {
-    this[property] = newValue;
+  changeCompletionStatus() {
+    this.isComplete ? this.isComplete = false : this.isComplete = true;
   }
 }

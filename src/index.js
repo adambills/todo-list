@@ -5,6 +5,7 @@ import {
   newTaskBtn,
   newTaskDialog,
   closeDialogBtns,
+  taskCheckmark,
   forms,
 } from "./domCache";
 import processForm from "./processForm";
@@ -39,7 +40,6 @@ for (const form of [...forms]) {
 
 
 /* 
--Expand tasks to view all info
 -Mark tasks as complete
 -Edit/delete folders/tasks
 -Use date-fns library for date formatting

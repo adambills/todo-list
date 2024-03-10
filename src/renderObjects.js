@@ -22,6 +22,9 @@ function renderFolder(folder) {
 }
 
 function renderTask(task) {
+  //could separate the first part of this into a different function
+  //and export it to renderTaskDialog to reduce duplicate code
+  //would need to add new paramaters to pass in the different DOM elements
   taskTitle.innerText = task.title;
   taskDueDate.innerText = task.dueDate;
   taskDescription.innerText = task.description;

@@ -19,7 +19,6 @@ export default function processForm(form) {
     folder.parent = activeFolder;
 
     renderFolder(folder);
-
   } else {
     activeFolder.addNewTask(...values);
     const taskArr = activeFolder.taskArr;
@@ -29,5 +28,14 @@ export default function processForm(form) {
 
     renderTask(task);
 
+    const taskCheckmark = task.element.querySelector(".taskCheckmark");
+
+    taskCheckmark.addEventListener("click", (e) => {
+      e.stopPropagation();
+      task.changeCompletionStatus();
+      task.isComplete
+        ? taskCheckmark.classList.add("taskComplete")
+        : taskCheckmark.classList.remove("taskComplete");
+    });
   }
 }

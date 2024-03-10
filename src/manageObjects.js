@@ -6,15 +6,6 @@ const rootFolder = new Folder("Home", "blue" /*, -1*/);
 let activeFolder = rootFolder;
 let selectedObject;
 
-// function setParents(parentFolder) {
-//   const folderArr = parentFolder.folderArr;
-
-//   for (const folder of folderArr) {
-//     folder.parent = parentFolder;
-//     setParents(folder);
-//   }
-// }
-
 function getSelectedObject(objectElement) {
   assignSelectedObject(rootFolder, objectElement);
   return selectedObject;
@@ -30,27 +21,11 @@ function setActiveFolder() {
   assignSelectedObject(rootFolder, folderElement);
   activeFolder = selectedObject;
 
-  
   header.innerText = activeFolder.title;
   const folderArr = activeFolder.folderArr;
   const taskArr = activeFolder.taskArr;
   renderActiveFolder(activeFolder, folderArr, taskArr);
 }
-
-// function assignClickedFolder(currentFolder, folderElement) {
-//   if (Object.values(currentFolder).includes(folderElement)) {
-//     activeFolder = rootFolder;
-//     return;
-//   }
-
-//   for (const folder of currentFolder.folderArr) {
-//     if (Object.values(folder).includes(folderElement)) {
-//       activeFolder = folder;
-//       return;
-//     }
-//     assignClickedFolder(folder, folderElement);
-//   }
-// }
 
 function assignSelectedObject(currentFolder, objectElement) {
 
