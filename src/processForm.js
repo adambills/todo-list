@@ -2,6 +2,7 @@ import { getActiveFolder } from "./manageObjects";
 import { getInputArr } from "./domCache";
 import { renderFolder, renderTask } from "./renderObjects";
 
+
 export default function processForm(form) {
   const activeFolder = getActiveFolder();
   const values = [];
@@ -27,15 +28,5 @@ export default function processForm(form) {
     task.parent = activeFolder;
 
     renderTask(task);
-
-    const taskCheckmark = task.element.querySelector(".taskCheckmark");
-
-    taskCheckmark.addEventListener("click", (e) => {
-      e.stopPropagation();
-      task.changeCompletionStatus();
-      task.isComplete
-        ? taskCheckmark.classList.add("taskComplete")
-        : taskCheckmark.classList.remove("taskComplete");
-    });
   }
 }

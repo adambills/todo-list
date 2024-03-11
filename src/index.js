@@ -40,7 +40,6 @@ for (const form of [...forms]) {
 
 
 /* 
--Mark tasks as complete
 -Edit/delete folders/tasks
 -Use date-fns library for date formatting
 -Use Web Storage API

@@ -10,15 +10,18 @@ import {
   taskDueDate,
   taskDescription,
 } from "./domCache";
+import { changeCompletionStatus, deleteObject } from "./manageObjects";
 
 function renderFolder(folder) {
   folderSVG.setAttribute("fill", folder.color);
   folderTitle.innerText = folder.title;
 
   const folderClone = folderTemplate.cloneNode(true);
-  folderClone.classList.remove('template');
+  folderClone.classList.remove("template");
   folder.element.appendChild(folderClone);
   folderContainer.appendChild(folder.element);
+
+  activateButtons(folder, "folder");
 }
 
 function renderTask(task) {
@@ -41,9 +44,38 @@ function renderTask(task) {
   }
 
   const taskClone = taskTemplate.cloneNode(true);
-  taskClone.classList.remove('template');
+  taskClone.classList.remove("template");
   task.element.appendChild(taskClone);
   taskContainer.appendChild(task.element);
+
+  activateButtons(task, "task");
+}
+
+function activateButtons(object, objectType) {
+  const taskCheckmark = object.element.querySelector(".taskCheckmark");
+  //const editObjectBtn = object.element.querySelector(".editObject");
+  const deleteObjectBtn = object.element.querySelector(".deleteObject");
+
+  if (taskCheckmark) {
+    taskCheckmark.addEventListener("click", (e) => {
+      e.stopPropagation();
+      changeCompletionStatus(object, taskCheckmark);
+    });
+  }
+
+  // editObjectBtn.addEventListener("click", (e)=> {
+  //   e.stopPropagation();
+  //   if (objectType === "task") {
+  //     renderEditTaskDialog(object);
+  //   } else {
+  //     renderEditFolderDialog(object);
+  //   }
+  // })
+
+  deleteObjectBtn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    deleteObject(object, objectType);
+  });
 }
 
 export { renderFolder, renderTask };
