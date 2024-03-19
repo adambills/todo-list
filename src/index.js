@@ -8,7 +8,7 @@ import {
   taskCheckmark,
   forms,
 } from "./domCache";
-import processForm from "./processForm";
+import { processNewForm, processEditForm } from "./processForm";
 import { renderRootLink } from "./renderFolderLinks";
 
 renderRootLink();
@@ -34,16 +34,20 @@ for (const form of [...forms]) {
   form.addEventListener("submit", (e) => {
     dialog.close();
     e.preventDefault();
-    processForm(form);
+    if (form.classList.contains("new")) {
+      processNewForm(form);
+    } else if (form.classList.contains("edit")) {
+      processEditForm(form);
+    }
   });
 }
 
-
 /* 
--Edit/delete folders/tasks
+-Edit folders/tasks
 -Use date-fns library for date formatting
 -Use Web Storage API
 
+-Add form validation
 -Move folders/tasks to different folder
 -Ability to move/delete multiple objects at once
 -Navigation tree for moving to any folder from anywhere (maybe have tree drop down from chevron icons)

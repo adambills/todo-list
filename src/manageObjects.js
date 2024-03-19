@@ -53,7 +53,7 @@ function assignSelectedObject(currentFolder, objectElement) {
 function changeCompletionStatus(task, taskCheckmark) {
   task.isComplete ? (task.isComplete = false) : (task.isComplete = true);
 
-  object.isComplete
+  task.isComplete
     ? taskCheckmark.classList.add("taskComplete")
     : taskCheckmark.classList.remove("taskComplete");
 }

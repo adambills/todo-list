@@ -15,4 +15,11 @@ export default class Task {
   changeCompletionStatus() {
     this.isComplete ? this.isComplete = false : this.isComplete = true;
   }
+
+  updateValues(valuesArr) {
+    this.title = valuesArr[0];
+    this.dueDate = valuesArr[1];
+    this.priority = valuesArr[2];
+    this.description = valuesArr[3];
+  }
 }

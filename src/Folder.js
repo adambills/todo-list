@@ -29,16 +29,11 @@ export default class Folder {
   addNewFolder(title, description, color, parentLevel) {
     const newFolder = new Folder(title, description, color, parentLevel);
     this.folderArr.push(newFolder);
-    //setParents(rootFolder);
     return newFolder;
   }
 
-  removeItem(index) {
-    if (index > -1) this.taskArr.splice(index, 1);
+  updateValues(valuesArr) {
+    this.title = valuesArr[0];
+    this.color = valuesArr[1];
   }
-
-  removeFolder(index) {
-    if (index > -1) this.folderArr.splice(index, 1);
-  }
-
 };

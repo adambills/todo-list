@@ -44,8 +44,16 @@
                 />
               </svg>
               <div class="folder-content">
-                <img src="./img/edit.svg" alt="Edit Folder Icon" class="editObject"/>
-                <img src="./img/delete.svg" alt="Delete Folder Icon" class="deleteObject"/>
+                <img
+                  src="./img/edit.svg"
+                  alt="Edit Folder Icon"
+                  class="editObject"
+                />
+                <img
+                  src="./img/delete.svg"
+                  alt="Delete Folder Icon"
+                  class="deleteObject"
+                />
                 <h4 class="folder-title">This is a Longer Folder Title</h4>
               </div>
             </div>
@@ -108,8 +116,16 @@
                   pariatur. Excepteur sint occaecat cupidatat non proident, sunt
                   in culpa qui officia deserunt mollit anim id est laborum.
                 </p>
-                <img src="./img/edit.svg" alt="Edit Task Icon" class="editObject"/>
-                <img src="./img/delete.svg" alt="Delete Task Icon" class="deleteObject"/>
+                <img
+                  src="./img/edit.svg"
+                  alt="Edit Task Icon"
+                  class="editObject"
+                />
+                <img
+                  src="./img/delete.svg"
+                  alt="Delete Task Icon"
+                  class="deleteObject"
+                />
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
@@ -133,7 +149,7 @@
               alt="An X Icon"
             />
 
-            <form class="folder-form" action="" method="">
+            <form class="folder-form new" action="" method="">
               <div class="title-input">
                 <label for="folder-title-input">Title</label>
                 <input
@@ -168,7 +184,7 @@
               alt="An X Icon"
             />
 
-            <form class="task-form" action="" method="">
+            <form class="task-form new" action="" method="">
               <div class="title-input">
                 <label for="task-title-input">Title</label>
                 <input
@@ -235,6 +251,123 @@
               </div>
 
               <button id="task-submit" type="submit">Create Task</button>
+            </form>
+          </div>
+        </dialog>
+
+        <dialog id="edit-folder-dialog">
+          <div class="form-container">
+            <h3>Update Folder</h3>
+            <img
+              src="./img/close-thick.svg"
+              class="closeDialog"
+              alt="An X Icon"
+            />
+
+            <form class="folder-form edit" action="" method="">
+              <div class="title-input">
+                <label for="edit-folder-title-input">Title</label>
+                <input
+                  id="edit-folder-title-input"
+                  name="edit-folder-title-input"
+                  type="text"
+                  maxlength="70"
+                />
+              </div>
+
+              <div class="color-input">
+                <label for="edit-folder-color-input">Color</label>
+                <input
+                  id="edit-folder-color-input"
+                  name="edit-folder-color-input"
+                  type="color"
+                  value="#ffffff"
+                />
+              </div>
+
+              <button id="edit-folder-submit" type="submit">
+                Update Folder
+              </button>
+            </form>
+          </div>
+        </dialog>
+
+        <dialog id="edit-task-dialog">
+          <div class="form-container">
+            <h3>Update Task</h3>
+            <img
+              src="./img/close-thick.svg"
+              class="closeDialog"
+              alt="An X Icon"
+            />
+
+            <form class="task-form edit" action="" method="">
+              <div class="title-input">
+                <label for="edit-task-title-input">Title</label>
+                <input
+                  id="edit-task-title-input"
+                  name="edit-task-title-input"
+                  type="text"
+                  maxlength="70"
+                />
+              </div>
+
+              <div class="date-input">
+                <label for="edit-task-date-input">Due Date</label>
+                <input
+                  id="edit-task-date-input"
+                  name="edit-task-date-input"
+                  type="date"
+                  value="2000-01-01"
+                />
+              </div>
+
+              <div class="edit-priority-input">
+                <fieldset>
+                  <legend>Priority Level</legend>
+                  <ul>
+                    <li>
+                      <input
+                        type="radio"
+                        name="edit-priority-input"
+                        id="edit-low-priority"
+                        value="low"
+                        checked
+                      />
+                      <label for="edit-low-priority">Low</label>
+                    </li>
+                    <li>
+                      <input
+                        type="radio"
+                        name="edit-priority-input"
+                        id="edit-medium-priority"
+                        value="medium"
+                      />
+                      <label for="edit-medium-priority">Medium</label>
+                    </li>
+                    <li>
+                      <input
+                        type="radio"
+                        name="edit-priority-input"
+                        id="edit-high-priority"
+                        value="high"
+                      />
+                      <label for="edit-high-priority">High</label>
+                    </li>
+                  </ul>
+                </fieldset>
+              </div>
+
+              <div class="description-input">
+                <label for="edit-task-description-input">Description</label>
+                <textarea
+                  id="edit-task-description-input"
+                  name="edit-task-description-input"
+                  rows="6"
+                ></textarea>
+              </div>
+
+              <button id="edit-task-submit" type="submit">Update Task</button>
             </form>
           </div>
         </dialog>

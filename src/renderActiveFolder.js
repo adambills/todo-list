@@ -1,4 +1,4 @@
-import { renderFolder, renderTask } from "./renderObjects";
+import { renderNewFolder, renderNewTask } from "./renderObjects";
 import { folderContainer, taskContainer } from "./domCache";
 import { renderFolderLinks } from "./renderFolderLinks";
 
@@ -15,11 +15,11 @@ export default function renderActiveFolder(activeFolder, folderArr, taskArr) {
   renderFolderLinks(activeFolder);
 
   for (const folder of folderArr) {
-    renderFolder(folder);
+    renderNewFolder(folder);
   }
 
   for (const task of taskArr) {
-    renderTask(task);
+    renderNewTask(task);
   }
 
   
