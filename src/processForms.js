@@ -1,5 +1,6 @@
 import { getActiveFolder } from "./manageObjects";
 import { getInputArr, newTaskBtn } from "./domCache";
+import { formatRelative } from "date-fns";
 import {
   renderNewFolder,
   renderNewTask,
@@ -56,6 +57,11 @@ function getInputValues(form) {
 
   for (const input of inputArr) {
     values.push(input.value);
+  }
+
+  if (form.classList.contains("task-form")) {
+    const formattedDate = formatRelative(new Date(values[1]), new Date());
+    values[1] = `Due ${formattedDate}`;
   }
 
   return values;

@@ -5,10 +5,9 @@ import {
   newTaskBtn,
   newTaskDialog,
   closeDialogBtns,
-  taskCheckmark,
   forms,
 } from "./domCache";
-import { processNewForm, processEditForm } from "./processForm";
+import { processNewForm, processEditForm } from "./processForms";
 import { renderRootLink } from "./renderFolderLinks";
 
 renderRootLink();
@@ -27,7 +26,7 @@ for (const button of [...closeDialogBtns]) {
   button.addEventListener("click", () => dialog.close());
 }
 
-// process form submission
+// process form submissions
 for (const form of [...forms]) {
   const dialog = form.closest("dialog");
 
@@ -43,12 +42,11 @@ for (const form of [...forms]) {
 }
 
 /* 
--Edit folders/tasks
 -Use date-fns library for date formatting
 -Use Web Storage API
 
 -Add form validation
--Move folders/tasks to different folder
+-Ability to move folders/tasks to different folder
 -Ability to move/delete multiple objects at once
 -Navigation tree for moving to any folder from anywhere (maybe have tree drop down from chevron icons)
 -A page that allows you to view all tasks, not just current folder's tasks 
